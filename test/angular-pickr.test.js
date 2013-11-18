@@ -1,0 +1,4 @@
+
+suite('angular-pickr', function() {
+
+});
