@@ -3,12 +3,16 @@
   <head>
     <meta charset="utf-8" />
     <title>angular-pickr example</title>
-    <script src="../components/angular/angular.js"></script>
+    <link rel="stylesheet" type="text/css" href="../bower_components/pickr/dist/pickr.css">
+    <script src="../bower_components/jquery/jquery.js"></script>
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/pickr/dist/pickr.js"></script>
     <script src="../dist/angular-pickr.js"></script>
     <script src="app.js"></script>
   </head>
   <body>
     <div ng-controller="MainController">
+      <input pickr="{allowPastDays:false}" ng-model="selectedDate" />
     </div>
   </body>
 </html>
