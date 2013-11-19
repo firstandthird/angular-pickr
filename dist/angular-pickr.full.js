@@ -1,7 +1,7 @@
 
 /*!
  * angular-pickr - Angular directive for pickr
- * v0.1.0
+ * v0.1.1
  * https://github.com/firstandthird/angular-pickr
  * copyright First + Third 2013
  * MIT License
@@ -515,7 +515,7 @@
         restrict: 'EA',
         require: 'ngModel',
         scope: {
-          selectedDate: '=ngModel',
+          model: '=ngModel',
           options: '&pickr'
         },
         link: function(scope, el, args) {
@@ -523,11 +523,17 @@
 
           el.pickr(options);
 
-          if (args.ngModel) {
-            scope.$watch('selectedDate', function(val) {
-              el.val(val);
-            }, true);
-          }
+          el.on('input', function() {
+            scope.$apply(function() {
+              scope.model = el.val();
+            });
+          });
+
+          scope.$watch('model', function(newVal, oldVal) {
+            if(newVal !== undefined) {
+              el.val(newVal);
+            }
+          });
         }
       };
     }]);
