@@ -1,7 +1,11 @@
 angular.module('example-app', ['pickr']);
 
-var MainController = function($scope) {
-  $scope.$watch('selectedDate', function(val) {
-    console.log('changed date', val);
-  }, true);
+var MainController = function($scope, $timeout) {
+  $scope.testModel = 'Pick Me';
+  $scope.$watch('testModel', function(newVal) {
+    console.log('changed', newVal);
+  });
+
+
+
 };
