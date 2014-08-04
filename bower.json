@@ -7,9 +7,9 @@
   "copyright": "First + Third",
   "main": "dist/angular-pickr.js",
   "dependencies": {
-    "jquery": "~1.10.0",
-    "angular": "~1.0.7",
-    "pickr": "~0.1.3"
+    "jquery": "~1.*",
+    "angular": "~1.*",
+    "pickr": "~0.2.0"
   },
   "devDependencies": {
     "assert": "*",
