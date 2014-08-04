@@ -1,10 +1,10 @@
 {
   "name": "angular-pickr",
   "description": "Angular directive for pickr",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "homepage": "https://github.com/firstandthird/angular-pickr",
   "license": "MIT",
-  "copyright": "First + Third",
+  "copyright": "First+Third",
   "main": "dist/angular-pickr.js",
   "dependencies": {
     "jquery": "~1.*",

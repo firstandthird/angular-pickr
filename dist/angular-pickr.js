@@ -1,9 +1,9 @@
 
 /*!
  * angular-pickr - Angular directive for pickr
- * v0.1.1
+ * v0.2.0
  * https://github.com/firstandthird/angular-pickr
- * copyright First + Third 2013
+ * copyright First+Third 2014
  * MIT License
 */
 (function() {
@@ -21,16 +21,10 @@
 
           el.pickr(options);
 
-          el.on('input', function() {
+          el.on('pickr:selected', function(e, dates) {
             scope.$apply(function() {
-              scope.model = el.val();
+              scope.model = dates;
             });
-          });
-
-          scope.$watch('model', function(newVal, oldVal) {
-            if(newVal !== undefined) {
-              el.val(newVal);
-            }
           });
         }
       };
