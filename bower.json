@@ -9,7 +9,7 @@
   "dependencies": {
     "jquery": "~1.*",
     "angular": "~1.*",
-    "pickr": "~0.2.0"
+    "pickr": "~0.3.0"
   },
   "devDependencies": {
     "assert": "*",
